@@ -1004,7 +1004,7 @@
     UICollectionViewLayoutInvalidationContext *context = [[[layout.class invalidationContextClass] alloc] init];
     [context invalidateItemsAtIndexPaths:indexPaths];
     
-    void (^block)() = ^{
+    void (^block)(void) = ^{
         [layout invalidateLayoutWithContext:context];
     };
     
