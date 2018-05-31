@@ -24,11 +24,11 @@
                       NSStringFromCGRect(self.frame), NSStringFromCGRect(self.bounds)]];
 
     const NSInteger sections = [self numberOfSections];
-    [debug addObject:[NSString stringWithFormat:@"Number of sections: %zi", sections]];
+    [debug addObject:[NSString stringWithFormat:@"Number of sections: %zi", (long)sections]];
 
     for (NSInteger section = 0; section < sections; section++) {
         [debug addObject:[NSString stringWithFormat:@"  %zi items in section %zi",
-                          [self numberOfItemsInSection:section], section]];
+                          [self numberOfItemsInSection:(long)section], (long)section]];
     }
 
     [debug addObject:@"Visible cell details:"];
